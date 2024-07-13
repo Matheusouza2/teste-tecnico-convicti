@@ -83,7 +83,7 @@ Para executar os testes do Laravel rode
   GET /api/v1/inicio
 ```
 
-#### Autenticar usuário - será retornado um token para acesso as demais rotas
+#### Salvar Venda - Será salva uma nova venda no banco de dados
 
 ```http
   POST /api/v1/venda/salvar
