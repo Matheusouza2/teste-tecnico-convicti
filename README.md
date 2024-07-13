@@ -8,7 +8,7 @@
 
 **Laravel 11**
 
-## Rodando a aplicação
+## Rodando a aplicação - LINUX
 
 Para rodar a aplicação para teste faça
 
@@ -19,6 +19,10 @@ Para rodar a aplicação para teste faça
 Quando finalizar a construção do Docker abra um novo terminal na pasta do projeto e rode (**Os dados de vendas gerados pelo seeder são apenas para testes de inserção, não tendo confiança nas relações**)
 
 ```bash
+  sudo make composer-install
+```
+
+```bash
   sudo make migrate && sudo make seed
 ```
 
@@ -26,6 +30,32 @@ Para executar os testes do Laravel rode
 
 ```bash
   sudo make test
+```
+
+## Rodando a aplicação - WINDOWS
+
+```bash
+  sudo docker compose up --build
+```
+
+Quando finalizar a construção do Docker abra um novo terminal na pasta do projeto e rode (**Os dados de vendas gerados pelo seeder são apenas para testes de inserção, não tendo confiança nas relações**)
+
+```bash
+  docker compose exec app composer install
+```
+
+```bash
+  docker compose exec app php artisan migrate
+```
+
+```bash
+    docker compose exec app php artisan db:seed
+```
+
+Para executar os testes do Laravel rode
+
+```bash
+  sudo docker compose exec app php artisan test
 ```
 
 ## Documentação da API
